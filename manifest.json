@@ -1,6 +1,6 @@
 {
-  "github.com/osminogo/test/": "Pushwoosh Demo",
-  "github.com/osminogo/test/": "Pushwoosh Demo",
+  "osminogo.github.io/test/": "Pushwoosh Demo",
+  "osminogo.github.io/test/": "Pushwoosh Demo",
   "7337614612": "GOOGLE_PROJECT_NUMBER",
   "display": "standalone",
   "gcm_user_visible_only": true
