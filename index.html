@@ -24,7 +24,18 @@
           }
         }]);
         
-        {
+       
+}
+    </script>
+</head>
+<body>
+    <h1>sasha is testing pushwoosh</h1>
+    <button onclick="Pushwoosh.subscribe()">Subscribe</button>
+<script>
+  Pushwoosh.push(['onSubscribe', function(api) {
+    console.log('User successfully subscribed');
+  }]);
+	{
 	"request": {
 		"application": "637A9-80556", // required. Pushwoosh application code
 		"auth": "fHavo9N26WWKXMlWRn79bhTguNKOChSDGPZOVbtlX5kD3MBcahi10n0kGhBXoVx5x5d2VFr4O1HNiuNgFhrr", // required. API access token from Pushwoosh Control Panel
@@ -46,16 +57,6 @@
 			"chrome_button_url2": "button2_url" // optional. Ignored if chrome_button_text2 is not set. 
 		}]
 	}
-}
-    </script>
-</head>
-<body>
-    <h1>sasha is testing pushwoosh</h1>
-    <button onclick="Pushwoosh.subscribe()">Subscribe</button>
-<script>
-  Pushwoosh.push(['onSubscribe', function(api) {
-    console.log('User successfully subscribed');
-  }]);
 </script>
 </body>
 </html>
