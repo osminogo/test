@@ -23,6 +23,30 @@
             'Name': 'John Smith'
           }
         }]);
+        
+        {
+	"request": {
+		"application": "637A9-80556", // required. Pushwoosh application code
+		"auth": "fHavo9N26WWKXMlWRn79bhTguNKOChSDGPZOVbtlX5kD3MBcahi10n0kGhBXoVx5x5d2VFr4O1HNiuNgFhrr", // required. API access token from Pushwoosh Control Panel
+		"notifications": [{
+			// Content settings
+			"send_date": "now", // required. YYYY-MM-DD HH:mm OR 'now'
+			"content": { // required, object( language1: 'content1', language2: 'content2' ) OR string. Ignored for Windows 8, use "wns_content" instead. (Use \n for multiline text. Ex: "hello\nfriend")
+				"en": "hi there!",
+			},
+
+			"chrome_title": "nazvaniye", // optional. You can specify the header of the message in this parameter.
+			"chrome_icon": "https://cp.pushwoosh.com/img/logo-medium.png", // full path URL to the icon or extension resources file path
+			"chrome_gcm_ttl": 3600, // optional. Time to live parameter – maximum message lifespan in seconds.
+			"chrome_duration": 20, // optional. max. 50 seconds. Changes chrome push display time. Set to 0 to display push until user interacts with it.
+			"chrome_image": "https://cp.pushwoosh.com/img/logo-medium.png", // optional. URL to large image. 
+			"chrome_button_text1": "1", // optional
+			"chrome_button_url1": "button1_URL", // optional. Ignored if chrome_button_text1 is not set.
+			"chrome_button_text2": "2", // optional
+			"chrome_button_url2": "button2_url" // optional. Ignored if chrome_button_text2 is not set. 
+		}]
+	}
+}
     </script>
 </head>
 <body>
