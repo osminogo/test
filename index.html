@@ -16,7 +16,7 @@
           applicationCode: '637A9-80556',
           defaultNotificationTitle: 'Pushwoosh',
           defaultNotificationImage: 'https://cp.pushwoosh.com/img/logo-medium.png',
-          autoSubscribe: true,
+          autoSubscribe: false,
           userId: 'user_id',
           tags: {
             'Name': 'John Smith'
@@ -30,5 +30,10 @@
 <body>
     <h1>sasha is testing pushwoosh YO</h1>
     <button onclick="Pushwoosh.subscribe()">Subscribe</button>
+    <script>
+  Pushwoosh.push(['onSubscribe', function(api) {
+    console.log('User successfully subscribed');
+  }]);
+</script>
 </body>
 </html>
