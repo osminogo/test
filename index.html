@@ -1,21 +1,18 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+<link rel="manifest" href="/manifest.json">
+<script type="text/javascript" src="//cdn.pushwoosh.com/webpush/v3/pushwoosh-web-notifications.js" async></script>
 
-<link rel="manifest" href="/manifest.json"> 
-<html lang="en"><head>
-<script src="//cdn.pushwoosh.com/webpush/v3/pushwoosh-web-notifications.js" async></script>
-  <script>
-  
-    <link rel="manifest" href="/manifest.json">
-    <script src="https://cdn.pushwoosh.com/webpush/v3/pushwoosh-web-notifications.js" async></script>
-    <script>
+<script type="text/javascript">
         var Pushwoosh = Pushwoosh || [];
         Pushwoosh.push(["init", {
           logLevel: 'info', // possible values: error, info, debug
           applicationCode: '637A9-80556',
           defaultNotificationTitle: 'Pushwoosh',
           defaultNotificationImage: 'https://cp.pushwoosh.com/img/logo-medium.png',
-          autoSubscribe: false,
-          userId: 'user_id',
+          serviceWorkerUrl: "/test/pushwoosh-service-worker.js",
+          autoSubscribe: false
           tags: {
             'Name': 'John Smith'
           }
@@ -25,7 +22,7 @@
     </script>
 </head>
 <body>
-    <h1>sasha is testing pushwoosh YO</h1>
+    <h1>sasha is testing pushwoosh</h1>
     <button onclick="Pushwoosh.subscribe()">Subscribe</button>
     <script>
   Pushwoosh.push(['onSubscribe', function(api) {
