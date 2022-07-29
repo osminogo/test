@@ -6,13 +6,16 @@
 
 <script type="text/javascript">
         var Pushwoosh = Pushwoosh || [];
-        Pushwoosh.push(["init", {
+        Pushwoosh.push(['init', {
           logLevel: 'info', // possible values: error, info, debug
           applicationCode: '637A9-80556',
           defaultNotificationTitle: 'Pushwoosh',
           defaultNotificationImage: 'https://cp.pushwoosh.com/img/logo-medium.png',
           serviceWorkerUrl: "/test/pushwoosh-service-worker.js",
-          autoSubscribe: false
+          autoSubscribe: false,
+          subscribeWidget: {
+    enable: true,
+  }
           tags: {
             'Name': 'John Smith'
           }
@@ -23,11 +26,5 @@
 </head>
 <body>
     <h1>sasha is testing pushwoosh</h1>
-    <button onclick="Pushwoosh.subscribe()">Subscribe</button>
-    <script>
-  Pushwoosh.push(['onSubscribe', function(api) {
-    console.log('User successfully subscribed');
-  }]);
-</script>
 </body>
 </html>
